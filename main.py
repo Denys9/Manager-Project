@@ -26,20 +26,3 @@ try:
 except IOError:
     print("I/O error")
 
-
-
-# with open(FILENAME, "a", newline="") as file:
-#    user = ["Sam", 31]
-#    writer = csv.writer(file)
-#    writer.writerow(user)
-
-# import csv
-
-# FILENAME = "users.csv"
-
-# with open(FILENAME, "r", newline="") as file:
-#    reader = csv.reader(file)
-#    for row in reader:
-#        for index in range(0, len(row)):
-#            print(row[index], end='\t')
-#        print()
