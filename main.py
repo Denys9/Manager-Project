@@ -1,20 +1,3 @@
-# path = "hello.txt";
-# while True:
-#    file_mode = input('inpute file mode[ w | r | a ]->')
-#    try:
-#        with open(path, file_mode, encoding="utf8") as myfile:
-#            if file_mode == 'w' or file_mode == 'a':
-#                text = input('inpute text->')
-#                myfile.write(text)
-#            elif file_mode == 'r':
-#                for text in myfile:
-#                    print(text)
-#    except Exception as e:
-#        print(e)
-#    finally:
-#        myfile.close()
-##-----------------------------------------------------------------------
-
 
 
 import csv
