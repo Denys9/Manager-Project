@@ -9,12 +9,11 @@ try:
             passwordc = input('Придумайте пароль - ')
             csv_columns = [loginc, passwordc]
             try:
-                with open(datafile, 'w') as csvfile:
+                with open(datafile, 'a') as csvfile:
                     writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
                     writer.writeheader()
             except IOError:
-                print('I/P error')
-
+                print('I/O error')
             continue
         if begin == 'y':
             print('Вхід в акаунт')
@@ -30,14 +29,11 @@ try:
             price = input('Введіть ціну товара - ')
             store = input('Введіть магазин купівлі - ')
             csv_columns1 = ['Продукт', 'Категорія', 'Кількість', 'Опис', 'Ціна', 'Магазин']
-
             dict_data = [
                 {'Продукт': product, 'Категорія': category, 'Кількість': amount,
                  'Опис': description, 'Ціна': price, 'Магазин': store}
             ]
-
             csv_file = "manager.csv"
-
             try:
                 with open(csv_file, 'w') as csvfile:
                     writer = csv.DictWriter(csvfile, delimiter=';', fieldnames=csv_columns1)
@@ -45,13 +41,7 @@ try:
                     for data in dict_data:
                         writer.writerow(data)
             except IOError:
-                print("I/O error")
-            if loginw != write[0]:
-                print('Невірний логін')
-            if passwordw != write[1]:
-                print('Невірний пароль')
-            else:
-                break
+                print('I/O error')
         else:
             print('Перевірте ввод символів!')
 except Exception as e:
